@@ -1,18 +1,13 @@
 import { Card } from '@/components/ui/card';
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  link: string;
-  technologies: string[];
-}
+import { Project } from '@/types/index';
 
 const ProjectCard = ({
   title,
   description,
   link,
+  github,
   technologies,
-}: ProjectCardProps) => {
+}: Project) => {
   return (
     <Card className="group relative overflow-hidden bg-matrix-black-light/30 backdrop-blur-lg border border-matrix-green/20 hover:border-matrix-green/40 transition-all duration-300">
       <div className="p-6">
@@ -30,14 +25,30 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block text-white hover:text-matrix-green/80 transition-colors"
-        >
-          View Project →
-        </a>
+        <div className="flex flex-wrap gap-4 mt-6">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-matrix-green/40 text-matrix-green hover:bg-matrix-green/10 hover:border-matrix-green transition-all duration-300 font-matrix text-sm flex items-center gap-2 group/button"
+          >
+            View Project
+            <span className="transform translate-x-0 group-hover/button:translate-x-1 transition-transform duration-300">
+              →
+            </span>
+          </a>
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-matrix-green/40 text-matrix-green hover:bg-matrix-green/10 hover:border-matrix-green transition-all duration-300 font-matrix text-sm flex items-center gap-2 group/button"
+          >
+            View Github
+            <span className="transform translate-x-0 group-hover/button:translate-x-1 transition-transform duration-300">
+              →
+            </span>
+          </a>
+        </div>
       </div>
       <div className="absolute inset-0 pointer-events-none border border-matrix-green/20 group-hover:border-matrix-green/40 transition-all duration-300" />
     </Card>

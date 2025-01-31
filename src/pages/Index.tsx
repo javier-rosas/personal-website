@@ -2,25 +2,32 @@ import { useEffect } from 'react';
 
 import MatrixRain from '@/components/MatrixRain';
 import ProjectCard from '@/components/ProjectCard';
+import { Project } from '@/types/index';
 
-const projects = [
+const projects: Project[] = [
   {
-    title: "Project Neo",
-    description: "A revolutionary AI system that predicts the future.",
-    link: "#",
-    technologies: ["React", "TypeScript", "AI"],
+    title: "Twitter Clone",
+    description:
+      "A clone of Twitter built with React, Typescript, Express, and MongoDB.",
+    link: "https://tuiter-7.netlify.app/",
+    github: "https://github.com/orgs/team7-tuiter/repositories",
+    technologies: ["React", "TypeScript", "Express", "MongoDB"],
   },
   {
-    title: "Morpheus",
-    description: "Dream analysis platform using machine learning.",
+    title: "Regium",
+    description:
+      "A centralized NFT marketplace made with React, Javascript, and Express.",
     link: "#",
-    technologies: ["Python", "TensorFlow", "React"],
+    github: "https://github.com/javier-rosas/regium-backend",
+    technologies: ["React", "Javascript", "Express", "MongoDB"],
   },
   {
-    title: "Zion",
-    description: "Secure communication platform for the resistance.",
+    title: "Streambuddy",
+    description:
+      "A chrome extension that allows you to watch Netflix with your friends",
     link: "#",
-    technologies: ["Node.js", "WebRTC", "Encryption"],
+    github: "https://github.com/javier-rosas/streambuddy",
+    technologies: ["React", "TypeScript", "Express", "MongoDB"],
   },
 ];
 
