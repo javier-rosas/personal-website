@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from '@/components/ui/card';
 
 interface ProjectCardProps {
   title: string;
@@ -7,14 +7,19 @@ interface ProjectCardProps {
   technologies: string[];
 }
 
-const ProjectCard = ({ title, description, link, technologies }: ProjectCardProps) => {
+const ProjectCard = ({
+  title,
+  description,
+  link,
+  technologies,
+}: ProjectCardProps) => {
   return (
     <Card className="group relative overflow-hidden bg-matrix-black-light/30 backdrop-blur-lg border border-matrix-green/20 hover:border-matrix-green/40 transition-all duration-300">
       <div className="p-6">
         <h3 className="text-matrix-green font-matrix text-xl mb-2 group-hover:animate-glitch">
           {title}
         </h3>
-        <p className="text-gray-400 mb-4">{description}</p>
+        <p className="mb-4 text-white">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech, index) => (
             <span
@@ -29,7 +34,7 @@ const ProjectCard = ({ title, description, link, technologies }: ProjectCardProp
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block text-matrix-green hover:text-matrix-green/80 transition-colors"
+          className="inline-block text-white hover:text-matrix-green/80 transition-colors"
         >
           View Project →
         </a>
