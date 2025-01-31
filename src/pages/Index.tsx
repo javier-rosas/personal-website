@@ -6,6 +6,23 @@ import { Project } from '@/types/index';
 
 const projects: Project[] = [
   {
+    title: "Abogo",
+    description:
+      "E-signature platform for businesses to sign documents with their clients.",
+    link: "https://abogo.ai/",
+    github: "https://github.com/abogo-ai",
+    technologies: ["React", "TypeScript", "Python", "MongoDB"],
+  },
+
+  {
+    title: "Koko Learn",
+    description:
+      "Leetcode clone. Supports Python & Javascript, code runs in the browser.",
+    link: "https://koko-learn.vercel.app/",
+    github: "https://github.com/javier-rosas/koko-learn",
+    technologies: ["React", "TypeScript", "MongoDB"],
+  },
+  {
     title: "Twitter Clone",
     description:
       "A clone of Twitter built with React, Typescript, Express, and MongoDB.",
@@ -49,6 +66,16 @@ const Index = () => {
             Choose the red pill and I'll show you how deep the rabbit hole goes.
             Explore my projects and discover the truth.
           </p>
+          <div className="mt-10">
+            <a
+              href="https://github.com/javier-rosas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-2xl hover:text-white transition-colors duration-300"
+            >
+              Follow the white rabbit to my GitHub 🐰
+            </a>
+          </div>
         </div>
 
         <div
@@ -62,7 +89,14 @@ const Index = () => {
       </main>
 
       <footer className="text-center text-white py-8 relative z-10">
-        <p>Follow the white rabbit. 🐰</p>
+        <a
+          href="https://github.com/javier-rosas"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-2xl hover:text-white transition-colors duration-300"
+        >
+          Follow the white rabbit 🐰
+        </a>{" "}
       </footer>
     </div>
   );
