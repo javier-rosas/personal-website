@@ -6,6 +6,15 @@ import { Project } from '@/types/index';
 
 const projects: Project[] = [
   {
+    title: "Grabalo AI",
+    description:
+      "Transcribe meetings, get summaries, and action items—all in one desktop app. Works with every meeting app on Mac. AI-powered notes, Q&A, and action items integration.",
+    link: "https://grabalo.ai/",
+    github: "#",
+    technologies: ["Bun", "Electron", "React", "TypeScript", "MacOS"],
+  },
+
+  {
     title: "Abogo",
     description:
       "E-signature platform for businesses to sign documents with their clients.",
